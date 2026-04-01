@@ -79,7 +79,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Set project name
-        run: echo "REPOSITORY_NAME=business-logic-maraffa" >> $GITHUB_ENV
+        run: echo "REPOSITORY_NAME=rules-engine-maraffa" >> $GITHUB_ENV
       - name: lowercase github.repository
         run: |
           echo "IMAGE_NAME=`echo ${{github.repository_owner}}/${{ env.REPOSITORY_NAME }} | tr '[:upper:]' '[:lower:]'`" >> ${GITHUB_ENV}
